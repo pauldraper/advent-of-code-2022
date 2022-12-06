@@ -3,14 +3,10 @@ import sys
 
 totals = []
 current = 0
-while True:
-    line = sys.stdin.readline()
+for line in sys.stdin:
     if line.strip():
         current += int(line)
     else:
         totals.append(current)
         current = 0
-    if not line:
-        break
-totals.sort()
-print(sum(totals[-3:]))
+print(sum(sorted(totals)[-3:]))
