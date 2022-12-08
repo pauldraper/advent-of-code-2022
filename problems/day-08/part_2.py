@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 import sys
 
-grid = {}
-for i, line in enumerate(sys.stdin):
-    for j, v in enumerate(line.strip()):
-        grid[(i, j)] = int(v)
+grid = {
+    (i, j): int(v)
+    for i, line in enumerate(sys.stdin)
+    for j, v in enumerate(line.strip())
+}
 
 best = 0
 for p, base in grid.items():
