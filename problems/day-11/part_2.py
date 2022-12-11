@@ -20,11 +20,9 @@ while sys.stdin.readline():
     operations.append(
         eval(f'lambda old: {sys.stdin.readline().replace("  Operation: new = ", "")}')
     )
-    divs.append(int(sys.stdin.readline().replace("  Test: divisible by ", "")))
-    trues.append(int(sys.stdin.readline().replace("    If true: throw to monkey ", "")))
-    falses.append(
-        int(sys.stdin.readline().replace("    If false: throw to monkey ", ""))
-    )
+    divs.append(int(sys.stdin.readline().split(" ")[-1]))
+    trues.append(int(sys.stdin.readline().split(" ")[-1]))
+    falses.append(int(sys.stdin.readline().split(" ")[-1]))
     sys.stdin.readline()
 
 
